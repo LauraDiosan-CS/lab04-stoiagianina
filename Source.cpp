@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
 
-#include "C:\\Users\user\source\repos\lab5\lab5\Header.h"
+#include "Source.h"
 
 using namespace std;
 
