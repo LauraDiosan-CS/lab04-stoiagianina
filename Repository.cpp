@@ -16,13 +16,25 @@ int Repository::repoSize()
 {
 	return this->All.size();
 }
-void teste1()
+void Repository::deleteRepo(int poz)
 {
-	Produs p1 = Produs("lapte", "12.03.19", 5);
-	Produs p2 = Produs("paine", "24.07.20", 3);
+	All.erase(All.begin() + poz);
+}
+void testeR()
+{
+	Data d1 = Data(12, 3, 2019);
+	Data d2 = Data(31, 3, 2020);
+	Produs p1 = Produs("lapte", d1, 5);
+	Produs p2 = Produs("paine", d2, 3);
 	Repository repo;
 	repo.addElem(p1);
 	assert(repo.repoSize() == 1);
+	repo.deleteRepo(0);
+	assert(repo.repoSize() == 0);
+	repo.addElem(p2);
+	assert(repo.repoSize() == 1);
+	repo.addElem(p1);
+	assert(repo.repoSize() == 2);
 	std::cout << "Teste din repo...\n";
 }
 	

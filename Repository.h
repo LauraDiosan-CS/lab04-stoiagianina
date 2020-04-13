@@ -1,5 +1,5 @@
 #include <vector>
-#include "Produs.h"
+#include "Cheltuieli.h"
 
 class Repository
 {
@@ -10,6 +10,7 @@ public:
 	std::vector<Produs>getAllRepo();
 	void addElem(Produs produs);
 	int repoSize();
+	void deleteRepo(int poz);
 };
 
-void teste1();
+void testeR();
